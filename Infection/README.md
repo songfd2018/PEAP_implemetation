@@ -1,15 +1,15 @@
 # Building gene pair signiture for the classification of infectious diseases
 
 ## Preprocessing
-    
-Conduct log2 transformation on the gene expression levels and extract with-pathway gene pairs in terms of 186 KEGG pathways.
+
+Conduct log2 transformation on the gene expression levels and extract within-pathway gene pairs in terms of 186 KEGG pathways.
     
 - Input: Gene expression matrices and metadata downloaded from the GEO platform
 - Output: Relative expression level matrix for within-pathway genes and samples from three different phenotypes, including healthy, viral-infected and bacterial-infected samples
 
 ## Phenotype Enrichment Analysis for Gene Pairs
 
-Apply weighted KS testing to relative expression levels calculates the phenotype-specific enrichment score for gene pairs, which will be used to rank the gene pairs. Parallel computing is applied to compute the phenotype-enrichment scores and p-values for different pathways in parallel.
+Apply weighted KS testing to relative expression levels and compute the phenotype-specific enrichment score for gene pairs, which will be used to rank the gene pairs. Parallel computing is applied to compute the phenotype-enrichment scores and p-values for different pathways in parallel.
 
 - Output: Matrices of phenotype-enrichment scores and p-values for all within-pathway gene pairs and all phenotypes
 
